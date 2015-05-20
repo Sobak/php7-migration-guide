@@ -18,6 +18,19 @@
 	 no longer accept <parameter>is_dst</parameter> parameter.
     </simpara>
    </listitem>
+   <listitem>
+    <simpara>
+     <function>preg_replace</function> function no longer supports
+     "\e" (<constant>PREG_REPLACE_EVAL</constant>). <funcion>preg_replace_callback</function>
+     should be used instead.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>setlocale</function> function no longer accepts <parameter>category</parameter>
+	 passed as string. <constant>LC_*</constant> constants must be used instead.
+    </simpara>
+   </listitem>
   </itemizedlist>
  </sect2>
 

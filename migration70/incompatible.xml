@@ -8,6 +8,15 @@
   note of some backward incompatible changes:
  </simpara>
 
+ <itemizedlist>
+  <listitem>
+   <simpara>
+    Functions <funcion>mcrypt_generic_end</funcion>, <function>mcrypt_ecb</function>,
+    <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and <function>mcrypt_ofb</function>
+    have been removed.
+   </simpara>
+  </listitem>
+ </itemizedlist>
  <!-- UPGRADING should be helpful here -->
 </sect1>
 

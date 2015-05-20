@@ -6,6 +6,18 @@
 <sect1 xml:id="migration70.new-functions">
  <title>New functions</title>
 
+ <sect2 xml:id="migration70.new-functions.closure">
+  <title><link linkend="class.closure">Closure</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <methodname>Closure::call</methodname>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
  <sect2 xml:id="migration70.new-functions.pcre">
   <title><link linkend="book.pcre">PCRE</link></title>
 
