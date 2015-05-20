@@ -8,27 +8,33 @@
   note of some backward incompatible changes:
  </simpara>
 
- <itemizedlist>
-  <listitem>
-   <simpara>
-    ASP tags &lt;% , %&gt; , &lt;%= , and script tag &lt;script language=php&gt;
-    are removed from PHP.
-   </simpara>
-  </listitem>
-  <listitem>
-   <simpara>
-    Functions <funcion>mcrypt_generic_end</funcion>, <function>mcrypt_ecb</function>,
-    <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and <function>mcrypt_ofb</function>
-    have been removed.
-   </simpara>
-  </listitem>
-  <listitem>
-   <simpara>
-    Support for <literal>#</literal>-style comments in INI files has been dropped. <literal>;</literal>
-    is the only possible comment indicator now.
-   </simpara>
-  </listitem>
- </itemizedlist>
+ <sect2 xml:id="migration70.incompatible.php-tags">
+  <title>ASP and script PHP tags removal</title>
+
+  <para>
+   ASP tags &lt;% , %&gt; , &lt;%= , and script tag &lt;script language=php&gt;
+   are removed from PHP.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.removed-functions">
+  <title>Function removals</title>
+
+  <para>
+   Functions <funcion>mcrypt_generic_end</funcion>, <function>mcrypt_ecb</function>,
+   <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and <function>mcrypt_ofb</function>
+   have been removed.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.ini-comments">
+  <title>Drop #-style comments in INI files</title>
+
+  <para>
+   Support for <literal>#</literal>-style comments in INI files has been dropped. <literal>;</literal>
+   is the only possible comment indicator now.
+  </para>
+ </sect2>
 </sect1>
 
 <!-- Keep this comment at the end of the file
