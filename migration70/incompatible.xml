@@ -22,7 +22,7 @@
 
   <para>
    It is no longer possible to define two function parameters with the same name.
-   For example, the following method will trigger a compile-time error:
+   For example, the following method will trigger <constant>E_COMPILE_ERROR</consant>:
   </para>
 
   <informalexample>
