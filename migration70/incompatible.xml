@@ -11,13 +11,24 @@
  <itemizedlist>
   <listitem>
    <simpara>
+    ASP tags &lt;% , %&gt; , &lt;%= , and script tag &lt;script language=php&gt;
+    are removed from PHP.
+   </simpara>
+  </listitem>
+  <listitem>
+   <simpara>
     Functions <funcion>mcrypt_generic_end</funcion>, <function>mcrypt_ecb</function>,
     <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and <function>mcrypt_ofb</function>
     have been removed.
    </simpara>
   </listitem>
+  <listitem>
+   <simpara>
+    Support for <literal>#</literal>-style comments in INI files has been dropped. <literal>;</literal>
+    is the only possible comment indicator now.
+   </simpara>
+  </listitem>
  </itemizedlist>
- <!-- UPGRADING should be helpful here -->
 </sect1>
 
 <!-- Keep this comment at the end of the file

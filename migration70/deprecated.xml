@@ -15,6 +15,38 @@
   </para>
  </sect2>
 -->
+ <sect2 xml:id="migration70.deprecated.php4-constructors">
+  <title>PHP4-style constructors</title>
+
+  <para>
+   PHP4-style constructors (methods that have the same name as the class they are defined in)
+   are deprecated. PHP 7 will emit <constant>E_DEPRECATED</constant> whenever a PHP 4 constructor
+   is defined. When the method name matches the class name, the class is not in a namespace,
+   and a PHP 5 constructor (__construct) is not present then an <constant>E_DEPRECATED</constant>
+   will be emitted.
+  </para>
+
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+class foo {
+    function foo() {
+        echo 'I am the constructor';
+    }
+}
+?>
+]]>
+   </programlisting>
+   &example.outputs;
+   <screen>
+<![CDATA[
+Deprecated: [todo: insert proper message here] in - on line 3
+B
+]]>
+   </screen>
+  </informalexample>
+ </sect2>
 </sect1>
 
 <!-- Keep this comment at the end of the file
