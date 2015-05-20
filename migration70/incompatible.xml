@@ -17,6 +17,36 @@
   </para>
  </sect2>
 
+ <sect2 xml:id="migration70.incompatible.func-parameters">
+  <title>Functions can't have more than one parameter with the same name</title>
+
+  <para>
+   It is no longer possible to define two function parameters with the same name.
+   For example, the following method will trigger a compile-time error:
+  </para>
+
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+function foo($a, $b, $unused, $unused) {
+    //
+}
+?>
+]]>
+   </programlisting>
+  </informalexample>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.http-raw-post-data">
+  <title>$HTTP_RAW_POST_DATA removal</title>
+
+  <para>
+   <varname>$HTTP_RAW_POST_DATA</varname> is no longer available. Use the
+   <literal>php://input</literal> stream instead.
+  </para>
+ </sect2>
+
  <sect2 xml:id="migration70.incompatible.removed-functions">
   <title>Function removals</title>
 
