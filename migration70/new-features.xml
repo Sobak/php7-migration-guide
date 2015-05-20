@@ -54,6 +54,32 @@ $width = isset($image['width']) ? $image['width'] : 100;
   <!-- TODO: describe chaining and precedence -->
   
  </sect2>
+
+ <sect2 xml:id="migration70.new-features.define-array">
+  <title>Constant arrays using <function>define</function></title>
+
+  <para>
+   As of PHP 7.0.0 it is possible to define <type>array</type> constant using
+   <function>define</function>. Defining <type>array</type> constant was possible
+   as of PHP 5.6, but only using <literal>const</literal> keyword.
+  </para>
+
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+define('ANIMALS', array(
+    'dog',
+    'cat',
+    'bird'
+));
+
+echo ANIMALS[1]; // outputs "cat"
+?>
+]]>
+   </programlisting>
+  </informalexample>
+ </sect2>
 </sect1>
 
 <!-- Keep this comment at the end of the file
