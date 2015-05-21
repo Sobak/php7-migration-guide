@@ -48,13 +48,72 @@ function foo($a, $b, $unused, $unused) {
  </sect2>
 
  <sect2 xml:id="migration70.incompatible.removed-functions">
-  <title>Function removals</title>
+  <title>Removed functions</title>
 
   <para>
-   Functions <funcion>mcrypt_generic_end</funcion>, <function>mcrypt_ecb</function>,
-   <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and <function>mcrypt_ofb</function>
-   have been removed.
+   Following functions have been removed from PHP:
   </para>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <funcion>mcrypt_generic_end</funcion> alias in favor of <function>mcrypt_generic_deinit</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     deprecated <function>mcrypt_ecb</function>,
+     <function>mcrypt_cbc</function>, <function>mcrypt_cfb</function> and
+     <function>mcrypt_ofb</function> in favor of <function>mcrypt_decrypt</function>
+     with an <literal>MCRYPT_MODE_*</literal>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     deprecated aliases <function>datefmt_set_timezone_id</function> and
+     <methodname>IntlDateFormatter::setTimeZoneID</methodname> in favor of
+     <function>datefmt_set_timezone</function> and <methodname>IntlDateFormatter::setTimeZone</methodname>
+     respectively
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>set_magic_quotes_runtime</function> and its alias <function>magic_quotes_runtime</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>set_socket_blocking</function> in favor of its alias <function>stream_set_blocking</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.removed-directives">
+  <title>Removed INI directives</title>
+
+  <para>
+   Following &php.ini; directives have been removed from PHP:
+  </para>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ini.always-populate-raw-post-data"><parameter>always_populate_raw_post_data</parameter></link>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ini.asp-tags"><parameter>asp_tags</parameter></link>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <parameter>xsl.security_prefs</parameter> - use <methodname>XsltProcessor::setSecurityPrefs</methodname>
+     instead
+    </simpara>
+   </listitem>
+  </itemizedlist>
  </sect2>
 
  <sect2 xml:id="migration70.incompatible.ini-comments">
