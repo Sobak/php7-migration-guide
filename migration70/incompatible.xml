@@ -72,8 +72,7 @@ function foo($a, $b, $unused, $unused) {
     <simpara>
      deprecated aliases <function>datefmt_set_timezone_id</function> and
      <methodname>IntlDateFormatter::setTimeZoneID</methodname> in favor of
-     <function>datefmt_set_timezone</function> and <methodname>IntlDateFormatter::setTimeZone</methodname>
-     respectively
+     <function>datefmt_set_timezone</function> or <methodname>IntlDateFormatter::setTimeZone</methodname>
     </simpara>
    </listitem>
    <listitem>
