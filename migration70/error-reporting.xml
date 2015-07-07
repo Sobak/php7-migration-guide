@@ -6,13 +6,18 @@
 
  <sect2 xml:id="migration70.new-features.engine-exceptions">
   <title>Engine exceptions</title>
-
+  <para>
+    
+  </para>
   <!-- TODO -->
  </sect2>
 
  <sect2 xml:id="migration70.error-reporting.exceptions-hierarchy">
   <title>Changes to the exceptions hierarchy</title>
 
+  <para>
+    
+  </para>
   <!-- TODO -->
  </sect2>
 

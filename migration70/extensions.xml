@@ -5,7 +5,7 @@
  <title>Other changes to extensions</title>
 
  <sect2 xml:id="migration70.extensions.ext">
-  <title><link linkend="book.ext">ext</link></title>
+  <title><!-- <link linkend="book.ext">ext</link> --></title>
 
   <para>
    Describe each of extension moved to PECL with a short reasoning?
