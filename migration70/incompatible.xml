@@ -22,7 +22,7 @@
 
   <para>
    It is no longer possible to define two function parameters with the same name.
-   For example, the following method will trigger <constant>E_COMPILE_ERROR</consant>:
+   For example, the following method will trigger <constant>E_COMPILE_ERROR</constant>:
   </para>
 
   <informalexample>
@@ -57,7 +57,7 @@ function foo($a, $b, $unused, $unused) {
   <itemizedlist>
    <listitem>
     <simpara>
-     <funcion>mcrypt_generic_end</funcion> alias in favor of <function>mcrypt_generic_deinit</function>
+     <function>mcrypt_generic_end</function> alias in favor of <function>mcrypt_generic_deinit</function>
     </simpara>
    </listitem>
    <listitem>

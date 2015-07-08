@@ -26,7 +26,7 @@
    <listitem>
     <simpara>
      <function>preg_replace</function> function no longer supports
-     "\e" (<constant>PREG_REPLACE_EVAL</constant>). <funcion>preg_replace_callback</function>
+     "\e" (<constant>PREG_REPLACE_EVAL</constant>). <function>preg_replace_callback</function>
      should be used instead.
     </simpara>
    </listitem>
@@ -38,7 +38,7 @@
    </listitem>
    <listitem>
     <simpara>
-     <function>exec</function>, <function>system</function> and <function>passthru</funcion>
+     <function>exec</function>, <function>system</function> and <function>passthru</function>
      functions have NULL byte protection now.
     </simpara>
    </listitem>
