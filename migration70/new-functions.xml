@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 
-<!-- preg_replace_callback_array(), intdiv() etc -->
-
 <sect1 xml:id="migration70.new-functions">
  <title>New functions</title>
 
@@ -13,30 +11,6 @@
    <listitem>
     <simpara>
      <methodname>Closure::call</methodname>
-    </simpara>
-   </listitem>
-  </itemizedlist>
- </sect2>
-
- <sect2 xml:id="migration70.new-functions.pcre">
-  <title><link linkend="book.pcre">PCRE</link></title>
-
-  <itemizedlist>
-   <listitem>
-    <simpara>
-     <function>preg_replace_callback_array</function>
-    </simpara>
-   </listitem>
-  </itemizedlist>
- </sect2>
-
- <sect2 xml:id="migration70.new-functions.math">
-  <title><link linkend="book.math">Math</link></title>
-
-  <itemizedlist>
-   <listitem>
-    <simpara>
-     <function>intdiv</function>
     </simpara>
    </listitem>
   </itemizedlist>
@@ -66,6 +40,30 @@
    <listitem>
     <simpara>
      <function>error_get_last</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.math">
+  <title><link linkend="book.math">Math</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>intdiv</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.pcre">
+  <title><link linkend="book.pcre">PCRE</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>preg_replace_callback_array</function>
     </simpara>
    </listitem>
   </itemizedlist>
