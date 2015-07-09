@@ -39,7 +39,7 @@
   <itemizedlist>
    <listitem>
     <simpara>
-     <function>error_get_last</function>
+     <function>error_clear_last</function>
     </simpara>
    </listitem>
   </itemizedlist>
