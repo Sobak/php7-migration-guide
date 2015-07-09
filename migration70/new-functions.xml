@@ -29,6 +29,47 @@
    </listitem>
   </itemizedlist>
  </sect2>
+
+ <sect2 xml:id="migration70.new-functions.math">
+  <title><link linkend="book.math">Math</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>intdiv</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.csprng">
+  <title><link linkend="book.csprng">CSPRNG</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>random_bytes</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>random_int</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.errorfunc">
+  <title><link linkend="book.errorfunc">Error Handling and Logging</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>error_clear_last</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
 </sect1>
 
 <!-- Keep this comment at the end of the file
