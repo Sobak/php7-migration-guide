@@ -68,6 +68,50 @@
    </listitem>
   </itemizedlist>
  </sect2>
+
+ <sect2 xml:id="migration70.new-functions.reflection">
+  <title><link linkend="book.reflection">Reflection</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>ReflectionParameter::getType</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>ReflectionFunctionAbstract::getReturnType</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.zlib">
+  <title><link linkend="book.zlib">Zlib Compression</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>inflate_add</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>deflate_add</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>inflate_init</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>deflate_init</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
 </sect1>
 
 <!-- Keep this comment at the end of the file
