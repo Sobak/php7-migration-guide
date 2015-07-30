@@ -9,10 +9,13 @@
 
  &appendices.migration70.incompatible;
  &appendices.migration70.new-features;
+ &appendices.migration70.sapi-changes;
  &appendices.migration70.deprecated;
  &appendices.migration70.changed-functions;
  &appendices.migration70.new-functions;
+ &appendices.migration70.classes;
  &appendices.migration70.extensions;
+ &appendices.migration70.constants;
  &appendices.migration70.error-reporting;
 
  <sect1 phd:chunk="false" xml:id="migration70.intro">
@@ -27,15 +30,15 @@
   </warning>
 
   <para>
-   Despite the fact that PHP 7.0.x is new major version, efforts were put to
-   make migration painless. This release focus mainly on removing functionality
-   deprecated in previous version and improving language consistency.
+   Despite the fact that PHP 7.0.x is a new major version, efforts were put in to
+   make migration as painless as possible. This release focusses mainly on removing
+   functionality deprecated in previous versions and improving language consistency.
   </para>
   <para>
    There are a <link linkend="migration70.incompatible">few incompatibilities</link>
    and <link linkend="migration70.new-features">new features</link> that should
-   be considered, and code should be tested before switching PHP
-   versions in production environments.
+   be considered, and code should be tested before switching PHP versions in
+   production environments.
   </para>
 
   <para>

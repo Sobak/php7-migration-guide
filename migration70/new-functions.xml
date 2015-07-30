@@ -69,6 +69,18 @@
   </itemizedlist>
  </sect2>
 
+ <sect2 xml:id="migration70.new-functions.posix">
+  <title><link linkend="book.posix">PCRE</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>posix_setrlimit</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
  <sect2 xml:id="migration70.new-functions.reflection">
   <title><link linkend="book.reflection">Reflection</link></title>
 
