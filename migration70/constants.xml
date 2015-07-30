@@ -4,6 +4,18 @@
 <sect1 xml:id="migration70.constants" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>New Global Constants</title>
 
+ <sect2 xml:id="migration70.constants.core">
+  <title><link linkend="reserved.constants">Core Predefined Constants</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>PHP_INT_MIN</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
  <sect2 xml:id="migration70.constants.libxml">
   <title><link linkend="book.libxml">LibXML</link></title>
 
