@@ -27,6 +27,18 @@
    </listitem>
   </itemizedlist>
  </sect2>
+ 
+ <sect2 xml:id="migration70.constants.pcre">
+  <title><link linkend="book.pcre">PCRE</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>PREG_JIT_STACKLIMIT_ERROR</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
 
  <sect2 xml:id="migration70.constants.posix">
   <title><link linkend="book.posix">POSIX</link></title>
@@ -115,6 +127,43 @@
    <listitem>
     <simpara>
      <constant>POSIX_RLIMIT_INFINITY</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+ 
+ <sect2 xml:id="migration70.constants.zlib">
+  <title><link linkend="book.zlib">Zlib</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_BLOCK</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_FINISH</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_FULL_FLUSH</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_NO_FLUSH</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_PARTIAL_FLUSH</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>ZLIB_SYNC_FLUSH</constant>
     </simpara>
    </listitem>
   </itemizedlist>
