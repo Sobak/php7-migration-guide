@@ -95,6 +95,14 @@ function foo($a, $b, $unused, $unused) {
      <function>dl</function> from fpm-fcgi
     </simpara>
    </listitem>
+   <listitem>
+    <simpara>
+     <function>imagepsbbox</function>, <function>imagepsencodefont</function>,
+     <function>imagepsextendedfont</function>, <function>imagepsfreefont</function>, 
+     <function>imagepsloadfont</function>, <function>imagepsslantfont</function>,
+     <function>imagepstext</function> due to T1Lib support removal 
+    </simpara>
+   </listitem>
   </itemizedlist>
  </sect2>
 
