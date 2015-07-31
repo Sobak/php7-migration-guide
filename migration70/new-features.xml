@@ -210,7 +210,7 @@ Fatal error: Uncaught TypeError: Argument 1 passed to add() must be of the type 
   </para>
  </sect2>
  <sect2 xml:id="migration70.new-features.return-type-declarations">
-  <title>Scalar Type Declarations</title>
+  <title>Return Type Declarations</title>
 
   <para>
    Return type declarations enable you to specify the return type of a function,
@@ -485,7 +485,7 @@ echo "\u{9999}";
   </informalexample>
  </sect2>
  <sect2 xml:id="migration70.new-features.closure-call-method">
-  <title>Closure call() Method</title>
+  <title>Closure::call() Method</title>
 
   <para>
    The new <function>call</function> method for closures is used as a shorthand
