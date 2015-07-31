@@ -41,11 +41,22 @@ class foo {
    &example.outputs;
    <screen>
 <![CDATA[
-Deprecated: [todo: insert proper message here] in - on line 3
-B
+Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; foo has a deprecated constructor in example.php on line 3
 ]]>
    </screen>
   </informalexample>
+ </sect2>
+
+ <sect2 xml:id="migration70.deprecated.pwshash-salt-option">
+  <title><function>password_hash</function> salt option</title>
+
+  <para>
+   The salt option for the <function>password_hash</function> function has been
+   deprecated to prevent developers from generating their own (usually insecure)
+   salts. The function itself generates a cryptographically secure salt when no
+   salt is provided by the developer - therefore custom salt generation should not
+   be needed.
+  </para>
  </sect2>
 </sect1>
 

@@ -57,6 +57,11 @@ function foo($a, $b, $unused, $unused) {
   <itemizedlist>
    <listitem>
     <simpara>
+     <function>call_user_method</function> and <function>call_user_method_array</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
      <function>mcrypt_generic_end</function> alias in favor of <function>mcrypt_generic_deinit</function>
     </simpara>
    </listitem>
@@ -83,6 +88,11 @@ function foo($a, $b, $unused, $unused) {
    <listitem>
     <simpara>
      <function>set_socket_blocking</function> in favor of its alias <function>stream_set_blocking</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>dl</function> from fpm-fcgi
     </simpara>
    </listitem>
   </itemizedlist>

@@ -14,13 +14,20 @@
   <itemizedlist>
    <listitem>
     <simpara>
+     <function>dirname</function> now optionally takes a second parameter,
+     <parameter>depth</parameter>, to get the name of the directory
+     <parameter>depth</parameter> levels up from the current directory.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
      <function>getrusage</function> is now supported on Windows.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mktime</function> and <function>gmmktime</function> functions
-	 no longer accept <parameter>is_dst</parameter> parameter.
+	    no longer accept <parameter>is_dst</parameter> parameter.
     </simpara>
    </listitem>
    <listitem>

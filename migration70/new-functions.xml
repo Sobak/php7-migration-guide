@@ -45,6 +45,18 @@
   </itemizedlist>
  </sect2>
 
+ <sect2 xml:id="migration70.new-functions.gmp">
+  <title><link linkend="book.gmp">GNU Multiple Precision</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>gmp_random_seed</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
  <sect2 xml:id="migration70.new-functions.math">
   <title><link linkend="book.math">Math</link></title>
 
@@ -64,6 +76,18 @@
    <listitem>
     <simpara>
      <function>preg_replace_callback_array</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </sect2>
+
+ <sect2 xml:id="migration70.new-functions.posix">
+  <title><link linkend="book.posix">POSIX</link></title>
+
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>posix_setrlimit</function>
     </simpara>
    </listitem>
   </itemizedlist>
