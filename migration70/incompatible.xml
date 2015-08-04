@@ -2,7 +2,7 @@
 <!-- $Revision$ -->
 
 <sect1 xml:id="migration70.incompatible">
- <title>Backward incompatible changes</title>
+ <title>Backward Incompatible Changes</title>
  <simpara>
   Although most existing PHP 5 code should work without changes, please take
   note of some backward incompatible changes:
@@ -139,6 +139,104 @@ function foo($a, $b, $unused, $unused) {
   <para>
    Support for <literal>#</literal>-style comments in INI files has been dropped. <literal>;</literal>
    is the only possible comment indicator now.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.invalid-octals">
+  <title>Invalid Octal Literals</title>
+
+  <para>
+   Previously, octal literals that contained invalid numbers were silently
+   truncated (<literal>0128</literal> was taken as <literal>012</literal>).
+   Now, an invalid octal literal will cause a parse error.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.forbidden-class-names">
+  <title>New Forbidden Class Names</title>
+
+  <para>
+   With the inclusion of scalar and return type declarations, classes can no
+   longer be named <literal>int</literal>, <literal>string</literal>,
+   <literal>float</literal>, and <literal>bool</literal>.
+  </para>
+
+  <para>
+   Also, with the inclusion of the new <classname>IntlChar</classname>,
+   <classname>ReflectionGenerator</classname>, and
+   <classname>ReflectionType</classname> classes, these can no longer be used
+   as class names.
+  </para>
+
+  <para>
+   Furthermore, with the new exception hierarchy, the following class names are
+   invalid too: <classname>Throwable</classname>, <classname>Error</classname>,
+   <classname>TypeError</classname>, <classname>AssertionError</classname>,
+   <classname>ParseError</classname>, <classname>ArithmeticError</classname>,
+   and <classname>DivisionByZeroError</classname>.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.forbidden-func-names">
+  <title>New Forbidden Function Names</title>
+
+  <para>
+   The following function names are now forbidden: <function>intdiv</function>,
+   <function>error_clear_last</function>, <function>posix_setrlimit</function>,
+   <function>preg_replace_callback_array</function>,
+   <function>random_bytes</function>, <function>random_int</function>,
+   <function>gmp_random_seed</function>, <function>inflate_add</function>,
+   <function>deflate_add</function>, <function>inflate_init</function>,
+   and <function>deflate_init</function>.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.forbidden-const-names">
+  <title>New Forbidden Constant Names</title>
+
+  <para>
+   The following constant names are now forbidden:
+   <constant>PHP_INT_MIN</constant>, <constant>LIBXML_BIGLINES</constant>,
+   <constant>PREG_JIT_STACKLIMIT_ERROR</constant>,
+   <constant>POSIX_RLIMIT_AS</constant>, <constant>POSIX_RLIMIT_CORE</constant>,
+   <constant>POSIX_RLIMIT_CPU</constant>, <constant>POSIX_RLIMIT_DATA</constant>,
+   <constant>POSIX_RLIMIT_FSIZE</constant>, <constant>POSIX_RLIMIT_LOCKS</constant>,
+   <constant>POSIX_RLIMIT_MEMLOCK</constant>, <constant>POSIX_RLIMIT_MSGQUEUE</constant>,
+   <constant>POSIX_RLIMIT_NICE</constant>, <constant>POSIX_RLIMIT_NOFILE</constant>,
+   <constant>POSIX_RLIMIT_NPROC</constant>, <constant>POSIX_RLIMIT_RSS</constant>,
+   <constant>POSIX_RLIMIT_RTPRIO</constant>, <constant>POSIX_RLIMIT_RTTIME</constant>,
+   <constant>POSIX_RLIMIT_SIGPENDING</constant>, <constant>POSIX_RLIMIT_STACK</constant>
+   <constant>POSIX_RLIMIT_INFINITY</constant>, <constant>ZLIB_BLOCK</constant>,
+   <constant>ZLIB_FINISH</constant>, <constant>ZLIB_FULL_FLUSH</constant>,
+   <constant>ZLIB_NO_FLUSH</constant>, <constant>ZLIB_PARTIAL_FLUSH</constant>,
+   and <constant>ZLIB_SYNC_FLUSH</constant>
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.var">
+  <title>Changes to the Evaluation Order for Variable Operators</title>
+
+  <para>
+   The evaluation order for variable operators has been changed to enable them
+   to be arbitrarily combined. The new behaviour is that all operators will be
+   evailuated from left-to-right:
+  </para>
+
+   <informalexample>
+    <programlisting>
+                        // old meaning            // new meaning
+$$foo['bar']['baz']     ${$foo['bar']['baz']}     ($$foo)['bar']['baz']
+$foo->$bar['baz']       $foo->{$bar['baz']}       ($foo->$bar)['baz']
+$foo->$bar['baz']()     $foo->{$bar['baz']}()     ($foo->$bar)['baz']()
+Foo::$bar['baz']()      Foo::{$bar['baz']}()      (Foo::$bar)['baz']()
+    </programlisting>
+   </informalexample>
+
+  <para>
+   Code that used the old right-to-left evaluation order must be rewritten to
+   explicitly use that evaluation order with curly braces (see the above middle
+   column). This will make the code both forwards compatible with PHP 7.x and
+   backwards compatible with PHP 5.x.
   </para>
  </sect2>
 </sect1>
