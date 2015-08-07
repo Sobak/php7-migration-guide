@@ -16,6 +16,7 @@
  &appendices.migration70.classes;
  &appendices.migration70.extensions;
  &appendices.migration70.constants;
+ &appendices.migration70.removed-exts-sapis;
  &appendices.migration70.error-reporting;
  &appendices.migration70.ini-changes;
  &appendices.migration70.other-changes;
