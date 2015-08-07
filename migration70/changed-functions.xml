@@ -15,7 +15,7 @@
   <listitem>
     <simpara>
      <function>debug_zval_dump</function> now prints "int" instead of "long",
-	 and "float" instead of "double"
+     and "float" instead of "double"
     </simpara>
    </listitem>
    <listitem>
