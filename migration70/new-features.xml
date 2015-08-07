@@ -213,8 +213,8 @@ Fatal error: Uncaught TypeError: Argument 1 passed to add() must be of the type 
   <title>Return Type Declarations</title>
 
   <para>
-   Return type declarations enable you to specify the return type of a function,
-   method, or closure. The following return types are supported:
+   Return type declarations enable for the return type of a function, method, or
+   closure to be specified. The following return types are supported:
    <type>string</type>, <literal>int</literal>, <type>float</type>,
    <literal>bool</literal>, <type>array</type>, <type>callable</type>,
    <literal>self</literal> (methods only), <literal>parent</literal> (methods
@@ -461,7 +461,7 @@ echo (new Outer)->func2()->func3();
   <title>Unicode Codepoint Escape Syntax</title>
 
   <para>
-   This enables you to output a UTF-8 encoded unicode codepoint in either a
+   This enables a UTF-8 encoded unicode codepoint to be output in either a
    double-quoted string or a heredoc. Any valid codepoint is accepted, with
    leading 0's being optional.
   </para>
@@ -576,7 +576,7 @@ bool(true)
   </informalexample>
 
   <para>
-   In order to use this class, you will need the <link linkend="book.intl">Intl</link> extension installed.
+   In order to use this class, the <link linkend="book.intl">Intl</link> extension must be installed.
   </para>
  </sect2>
  <sect2 xml:id="migration70.new-features.expectations">

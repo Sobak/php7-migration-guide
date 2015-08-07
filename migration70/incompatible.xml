@@ -2,7 +2,7 @@
 <!-- $Revision$ -->
 
 <sect1 xml:id="migration70.incompatible">
- <title>Backward incompatible changes</title>
+ <title>Backward Incompatible Changes</title>
  <simpara>
   Although most existing PHP 5 code should work without changes, please take
   note of some backward incompatible changes:
@@ -139,6 +139,43 @@ function foo($a, $b, $unused, $unused) {
   <para>
    Support for <literal>#</literal>-style comments in INI files has been dropped. <literal>;</literal>
    is the only possible comment indicator now.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.invalid-octals">
+  <title>Invalid Octal Literals</title>
+
+  <para>
+   Previously, octal literals that contained invalid numbers were silently
+   truncated (<literal>0128</literal> was taken as <literal>012</literal>).
+   Now, an invalid octal literal will cause a parse error.
+  </para>
+ </sect2>
+
+ <sect2 xml:id="migration70.incompatible.var">
+  <title>Changes to the Evaluation Order for Variable Operators</title>
+
+  <para>
+   The evaluation order for variable operators has been changed to enable them
+   to be arbitrarily combined. The new behaviour is that all operators will be
+   evailuated from left-to-right:
+  </para>
+
+   <informalexample>
+    <programlisting>
+                        // old meaning            // new meaning
+$$foo['bar']['baz']     ${$foo['bar']['baz']}     ($$foo)['bar']['baz']
+$foo->$bar['baz']       $foo->{$bar['baz']}       ($foo->$bar)['baz']
+$foo->$bar['baz']()     $foo->{$bar['baz']}()     ($foo->$bar)['baz']()
+Foo::$bar['baz']()      Foo::{$bar['baz']}()      (Foo::$bar)['baz']()
+    </programlisting>
+   </informalexample>
+
+  <para>
+   Code that used the old right-to-left evaluation order must be rewritten to
+   explicitly use that evaluation order with curly braces (see the above middle
+   column). This will make the code both forwards compatible with PHP 7.x and
+   backwards compatible with PHP 5.x.
   </para>
  </sect2>
 </sect1>
