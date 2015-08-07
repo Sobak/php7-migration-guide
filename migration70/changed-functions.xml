@@ -12,6 +12,12 @@
   -->
 
   <itemizedlist>
+  <listitem>
+    <simpara>
+     <function>debug_zval_dump</function> now prints "int" instead of "long",
+	 and "float" instead of "double"
+    </simpara>
+   </listitem>
    <listitem>
     <simpara>
      <function>dirname</function> now optionally takes a second parameter,
@@ -27,7 +33,7 @@
    <listitem>
     <simpara>
      <function>mktime</function> and <function>gmmktime</function> functions
-	    no longer accept <parameter>is_dst</parameter> parameter.
+	 no longer accept <parameter>is_dst</parameter> parameter.
     </simpara>
    </listitem>
    <listitem>
